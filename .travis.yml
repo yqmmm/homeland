@@ -3,7 +3,6 @@ language: ruby
 addons:
   postgresql: "9.4"
   artifacts:
-    s3_region: "ap-northeast-2"
     debug: true
 
 services:
