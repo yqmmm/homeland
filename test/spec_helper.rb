@@ -7,4 +7,4 @@ MiniTest::Spec.register_spec_type /Controller$/, ActionDispatch::IntegrationTest
 
 require_relative "./support/api_controller_test"
 
-require_relative "./sql_log"
+# require_relative "./sql_log"
