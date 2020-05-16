@@ -8,6 +8,9 @@ addons:
     paths: 
       - $(find . -name "sql.logs")
       - $(find . -name "Makefile")
+    working_dir:
+      - sql.logs
+      - Makefile
 
 services:
   - postgresql
