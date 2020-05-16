@@ -16,7 +16,7 @@ require "mocha/minitest"
 require "rails/test_help"
 require "sidekiq/testing"
 
-require "./sql_log"
+require_relative "./sql_log"
 
 FileUtils.mkdir_p(Rails.root.join("tmp/cache"))
 
