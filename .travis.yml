@@ -33,5 +33,5 @@ before_script:
   - RAILS_ENV=test bundle exec rake db:migrate
 
 script:
-  - bundle exec rubocop .
+  # - bundle exec rubocop .
   - RUBYOPT=W0 RAILS_ENV=test bundle exec rails test
