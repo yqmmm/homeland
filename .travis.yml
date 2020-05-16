@@ -6,11 +6,9 @@ addons:
   artifacts:
     debug: true
     paths: 
-      - $(find . -name "sql.logs")
-      - $(find . -name "Makefile")
-    working_dir:
-      - sql.logs
-      - Makefile
+      - ./sql.logs
+      # - $(find . -name "sql.logs")
+      # - $(find . -name "Makefile")
 
 services:
   - postgresql
