@@ -117,5 +117,4 @@ class ActionDispatch::IntegrationTest
   end
 end
 
-# require_relative "./sql_log"
-
+require_relative "./sql_log"

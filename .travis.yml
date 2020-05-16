@@ -7,6 +7,7 @@ addons:
     debug: true
     paths: 
       - ./sql.logs
+      - ./homeland.schema.sql
 
 services:
   - postgresql
@@ -35,3 +36,4 @@ before_script:
 script:
   # - bundle exec rubocop .
   - RUBYOPT=W0 RAILS_ENV=test bundle exec rails test
+  - pg_dump -U zxd -s homeland-test > homeland.schema.sql
