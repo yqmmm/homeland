@@ -1,5 +1,6 @@
 module SqlSource
-  class << self attr_accessor :current_tag
+  class << self
+    attr_accessor :current_tag
     attr_accessor :dest, :bc
 
     def find_source(trace)
