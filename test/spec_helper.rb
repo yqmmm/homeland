@@ -49,6 +49,7 @@ module SqlSource
   end
 end
 
+puts Rails.root.join("sql.logs")
 SqlSource.dest = File.new(Rails.root.join("sql.logs"), "a")
 SqlSource.bc = ActiveSupport::BacktraceCleaner.new
 SqlSource.bc.add_filter { |line| line.gsub(Rails.root.to_s, '') }
