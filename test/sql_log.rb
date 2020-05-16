@@ -31,14 +31,17 @@ module SqlSource
     end
 
     def close()
+      puts "closing"
       return unless not @current_tag.nil?
       @dest.puts("-#@current_tag")
-      @dest.close
+      # @dest.close
     end
   end
 end
 
 SqlSource.dest = File.new(Rails.root.join("sql.logs"), "a")
+puts Rails.root.join("sql.logs")
+puts SqlSource.dest
 SqlSource.bc = ActiveSupport::BacktraceCleaner.new
 SqlSource.bc.add_filter { |line| line.gsub(Rails.root.to_s, '') }
 SqlSource.bc.add_silencer { |line| line =~ /\.rvm|_test/ }
