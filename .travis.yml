@@ -7,8 +7,6 @@ addons:
     debug: true
     paths: 
       - ./sql.logs
-      # - $(find . -name "sql.logs")
-      # - $(find . -name "Makefile")
 
 services:
   - postgresql

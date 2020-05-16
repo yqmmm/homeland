@@ -152,6 +152,7 @@ module SqlSource
     end
 
     def close()
+      puts "closing"
       return unless not @current_tag.nil?
       @dest.puts("-#@current_tag")
       # @dest.close
